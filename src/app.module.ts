@@ -3,6 +3,9 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { TenantsModule } from './tenants/tenants.module';
+import { HubUsersModule } from './hub-users/hub-users.module';
+import { PropertiesModule } from './properties/properties.module';
 
 @Module({
   imports: [
@@ -28,6 +31,12 @@ import { AppService } from './app.service';
         synchronize: false, // Set to true only during initial development
       }),
     }),
+
+    TenantsModule,
+
+    HubUsersModule,
+
+    PropertiesModule,
   ],
   controllers: [AppController],
   providers: [AppService],
