@@ -6,6 +6,7 @@ import { AppService } from './app.service';
 import { TenantsModule } from './tenants/tenants.module';
 import { HubUsersModule } from './hub-users/hub-users.module';
 import { PropertiesModule } from './properties/properties.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -37,6 +38,8 @@ import { PropertiesModule } from './properties/properties.module';
     HubUsersModule,
 
     PropertiesModule,
+
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
